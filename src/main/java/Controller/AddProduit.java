@@ -39,12 +39,13 @@ public class AddProduit extends HttpServlet {
 	        String categorie= request.getParameter("categorie");
 	        
 	        ProduitModel p =new ProduitModel();
+	       
 	        p.setNameProduit(nameProduit);
 	        p.setDescriptionProduit(descriptionProduit);
 	        p.setPrix(prix);
 	        p.setQuantite(quantite);
 	        p.setCategorie(categorie);
-	        System.out.println(p);
+	       // System.out.println(p);
 	        int result =ProduitDao.SaveProduit(p);
 	        if (result>0) {
 	        	response.sendRedirect("DesplayProduit");

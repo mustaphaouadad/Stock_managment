@@ -20,7 +20,7 @@ public class DeleteProduit extends HttpServlet {
 	       System.out.println(idProduit);
 	       int result =ProduitDao.deleteProduitById(idProduit);
 	       if (result>0) {
-	    	   response.sendRedirect("desplayProduit");
+	    	   response.sendRedirect("DesplayProduit");
 		} else {
 			PrintWriter out=response.getWriter();
 			out.println("Project id not avilibal");
